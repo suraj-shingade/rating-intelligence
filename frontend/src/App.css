@@ -1,0 +1,58 @@
+/* ============================================================
+   App-level styles -- Minimal, mostly handled by index.css
+   and component-specific CSS files.
+   ============================================================ */
+
+/* Markdown rendered content global styles */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content h1:first-child,
+.markdown-content h2:first-child,
+.markdown-content h3:first-child {
+  margin-top: 0;
+}
+
+.markdown-content p {
+  margin-bottom: 0.75em;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25em;
+}
+
+.markdown-content code {
+  background: var(--color-gray-100);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.markdown-content strong {
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--color-gray-200);
+  margin: 1em 0;
+}

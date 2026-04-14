@@ -1,0 +1,115 @@
+{
+  "entity_name": "Bharat Steel Industries Limited",
+  "sector": "manufacturing",
+  "sub_sector": "steel",
+  "incorporation_year": 2001,
+  "promoter_group": "Bharat Industrial Group",
+  "management_experience_years": 22,
+  "market_position": "Top-8 integrated steel producer in India with 3.2 MTPA installed capacity. Primarily focused on long products (TMT bars, wire rods) serving the construction and infrastructure sectors. Domestic market share of approximately 2.5% in the long products segment.",
+  "geographic_diversification": "Revenue split: Domestic 78%, Export 22%. Export markets include Middle East (12%), Southeast Asia (6%), and Africa (4%). Domestic sales concentrated in western and southern India (65% of domestic revenue).",
+  "product_diversification": "Product mix: TMT bars (55% of revenue), wire rods (20%), structural steel (15%), billets and semi-finished products (10%). Downstream value addition increasing gradually with commissioning of new wire drawing facility in FY2024.",
+  "key_customers": [
+    "Larsen & Toubro (infrastructure projects)",
+    "Shapoorji Pallonji Group",
+    "Dilip Buildcon Limited",
+    "General trade channel (40% of domestic sales)",
+    "Direct institutional sales to government infrastructure projects"
+  ],
+  "financials": [
+    {
+      "fiscal_year": "FY2024",
+      "revenue": 8450.0,
+      "ebitda": 1183.0,
+      "ebitda_margin": 14.0,
+      "pat": 520.0,
+      "total_debt": 3200.0,
+      "tangible_net_worth": 4100.0,
+      "debt_to_equity": 0.78,
+      "interest_coverage": 5.2,
+      "current_ratio": 1.35,
+      "roce": 16.5,
+      "debt_to_ebitda": 2.7,
+      "dscr": 1.65,
+      "cash_and_equivalents": 380.0
+    },
+    {
+      "fiscal_year": "FY2023",
+      "revenue": 9200.0,
+      "ebitda": 1380.0,
+      "ebitda_margin": 15.0,
+      "pat": 640.0,
+      "total_debt": 3500.0,
+      "tangible_net_worth": 3600.0,
+      "debt_to_equity": 0.97,
+      "interest_coverage": 5.8,
+      "current_ratio": 1.28,
+      "roce": 18.2,
+      "debt_to_ebitda": 2.54,
+      "dscr": 1.72,
+      "cash_and_equivalents": 310.0
+    },
+    {
+      "fiscal_year": "FY2022",
+      "revenue": 8800.0,
+      "ebitda": 1496.0,
+      "ebitda_margin": 17.0,
+      "pat": 710.0,
+      "total_debt": 3800.0,
+      "tangible_net_worth": 3000.0,
+      "debt_to_equity": 1.27,
+      "interest_coverage": 5.5,
+      "current_ratio": 1.22,
+      "roce": 19.1,
+      "debt_to_ebitda": 2.54,
+      "dscr": 1.58,
+      "cash_and_equivalents": 250.0
+    }
+  ],
+  "rating_history": [
+    {
+      "date": "2024-03-15",
+      "instrument": "Long-term Bank Loan Facility",
+      "amount_crore": 2500,
+      "rating": "CRISIL A+/Stable",
+      "action": "reaffirmation"
+    },
+    {
+      "date": "2024-03-15",
+      "instrument": "Short-term Bank Loan Facility",
+      "amount_crore": 700,
+      "rating": "CRISIL A1",
+      "action": "reaffirmation"
+    },
+    {
+      "date": "2023-03-20",
+      "instrument": "Long-term Bank Loan Facility",
+      "amount_crore": 2500,
+      "rating": "CRISIL A+/Stable",
+      "action": "upgrade"
+    }
+  ],
+  "key_rating_drivers": {
+    "strengths": [
+      "Integrated operations with captive iron ore mine meeting 60% of raw material requirement, providing cost advantage over non-integrated peers",
+      "Established market position in western India with long-standing relationships with key infrastructure contractors",
+      "Consistent deleveraging trajectory: Debt/Equity improved from 1.27x in FY2022 to 0.78x in FY2024 through a combination of debt repayment and profit retention",
+      "Promoter group with 22 years of steel industry experience and track record of navigating commodity cycles"
+    ],
+    "weaknesses": [
+      "Product concentration in long products segment (75% of revenue) exposes the company to construction sector cyclicality",
+      "Revenue decline of 8.2% in FY2024 driven by softening steel realizations, though partially offset by volume growth of 4%",
+      "Geographic concentration in western and southern India (65% of domestic sales) limits demand diversification",
+      "Working capital intensity: inventory and debtor days increased in FY2024, tightening liquidity buffer"
+    ]
+  },
+  "sector_context": {
+    "industry_outlook": "Stable. Indian steel demand supported by government infrastructure spending (National Infrastructure Pipeline) and housing sector recovery. However, global steel prices remain volatile due to China demand uncertainty and trade protection measures in key export markets.",
+    "capacity_utilization": "78% (FY2024), up from 74% (FY2023). Industry average approximately 80%.",
+    "key_risks": [
+      "Iron ore price volatility (40% of cost of production for non-integrated players)",
+      "Chinese steel exports creating pricing pressure in export markets",
+      "Carbon border adjustment mechanism (CBAM) impact on European export competitiveness",
+      "Interest rate cycle affecting construction sector demand"
+    ]
+  }
+}

@@ -1,0 +1,197 @@
+# Rating Methodology Intelligence System -- Application Configuration
+# All environment-specific overrides should be set via .env file.
+# This file contains structural and default configuration values.
+
+application:
+  name: "Rating Methodology Intelligence System"
+  version: "1.0.0"
+  description: "RAG-powered credit research assistant for CRISIL rating analysts"
+
+weaviate:
+  collections:
+    rating_methodology:
+      name: "RatingMethodology"
+      description: "Sector-specific rating criteria and methodology documents"
+      properties:
+        - name: "content"
+          data_type: "text"
+          description: "Methodology text content"
+        - name: "sector"
+          data_type: "text"
+          description: "Industry sector classification"
+        - name: "sub_sector"
+          data_type: "text"
+          description: "Industry sub-sector classification"
+        - name: "version"
+          data_type: "text"
+          description: "Methodology document version"
+        - name: "effective_date"
+          data_type: "text"
+          description: "Date this methodology version became effective"
+        - name: "rating_scale_type"
+          data_type: "text"
+          description: "Rating scale type (long-term, short-term, bank loan)"
+        - name: "source_document"
+          data_type: "text"
+          description: "Source document filename"
+        - name: "chunk_index"
+          data_type: "int"
+          description: "Position of this chunk within the source document"
+
+    precedent_rating:
+      name: "PrecedentRating"
+      description: "Historical rating decisions with rationales and financial context"
+      properties:
+        - name: "content"
+          data_type: "text"
+          description: "Rating rationale and decision summary"
+        - name: "entity_name"
+          data_type: "text"
+          description: "Rated entity name"
+        - name: "sector"
+          data_type: "text"
+          description: "Entity sector classification"
+        - name: "rating_assigned"
+          data_type: "text"
+          description: "Rating assigned (e.g., CRISIL AA+, CRISIL A1)"
+        - name: "rating_date"
+          data_type: "text"
+          description: "Date of rating action"
+        - name: "rating_action"
+          data_type: "text"
+          description: "Type of rating action (new, upgrade, downgrade, reaffirmation)"
+        - name: "key_drivers"
+          data_type: "text"
+          description: "Comma-separated key rating drivers"
+        - name: "financial_summary"
+          data_type: "text"
+          description: "Summary of key financial metrics at time of rating"
+
+    industry_report:
+      name: "IndustryReport"
+      description: "Sector research reports, macro analysis, and industry outlook"
+      properties:
+        - name: "content"
+          data_type: "text"
+          description: "Report text content"
+        - name: "sector"
+          data_type: "text"
+          description: "Industry sector classification"
+        - name: "report_date"
+          data_type: "text"
+          description: "Publication date of the report"
+        - name: "report_type"
+          data_type: "text"
+          description: "Type of report (outlook, analysis, special commentary)"
+        - name: "key_themes"
+          data_type: "text"
+          description: "Comma-separated key themes covered in the report"
+        - name: "source_document"
+          data_type: "text"
+          description: "Source document filename"
+        - name: "chunk_index"
+          data_type: "int"
+          description: "Position of this chunk within the source document"
+
+  search:
+    default_limit: 10
+    max_limit: 50
+    hybrid_alpha: 0.75  # Weight toward vector search (0=keyword only, 1=vector only)
+    certainty_threshold: 0.7
+
+document_processing:
+  supported_extensions:
+    - ".md"
+    - ".txt"
+    - ".json"
+  metadata_extraction:
+    sector_keywords:
+      manufacturing:
+        - "manufacturing"
+        - "industrial"
+        - "steel"
+        - "cement"
+        - "automotive"
+        - "chemicals"
+        - "textiles"
+        - "pharmaceuticals"
+      financial:
+        - "banking"
+        - "nbfc"
+        - "insurance"
+        - "financial services"
+        - "microfinance"
+        - "housing finance"
+      infrastructure:
+        - "infrastructure"
+        - "power"
+        - "roads"
+        - "ports"
+        - "telecom"
+        - "real estate"
+      services:
+        - "it services"
+        - "hospitality"
+        - "healthcare"
+        - "education"
+        - "logistics"
+
+llm:
+  prompt_templates:
+    system_context: >
+      You are a credit rating research assistant for CRISIL Ratings, India's largest
+      credit rating agency. You assist rating analysts by retrieving relevant methodology
+      sections, analyzing financial data against rating criteria, and generating structured
+      draft assessments. You never recommend or suggest a specific rating. All outputs are
+      drafts for analyst review and committee adjudication. Maintain a professional,
+      analytical tone consistent with credit rating publications.
+
+    methodology_search: >
+      Based on the following rating methodology excerpts, provide a comprehensive answer
+      to the analyst's query. Cite specific sections and criteria from the retrieved
+      methodology documents. If the retrieved context does not contain sufficient
+      information, state this clearly rather than speculating.
+
+    credit_assessment: >
+      Using the provided rating methodology criteria and the company's financial profile,
+      generate a structured draft credit assessment. The assessment must include:
+      1. Business Risk Assessment (industry position, competitive strengths, management quality)
+      2. Financial Risk Assessment (profitability, leverage, coverage, liquidity)
+      3. Key Rating Strengths (with evidence from financial data)
+      4. Key Rating Weaknesses (with evidence from financial data)
+      5. Outlook Considerations (factors that could affect future rating trajectory)
+
+      Ground every analytical point in specific financial data or methodology criteria.
+      Do NOT recommend a specific rating. Present the analytical evidence and let the
+      rating committee draw conclusions.
+
+    peer_comparison: >
+      Compare the subject entity's financial profile against the provided peer group data.
+      Produce a structured comparison covering:
+      1. Relative positioning on key financial metrics (profitability, leverage, coverage)
+      2. Qualitative differentiators (business diversity, market position, management)
+      3. Areas where the subject entity outperforms or underperforms peers
+      4. Industry context that affects the comparison
+
+    surveillance_alert: >
+      Based on the provided financial triggers and applicable rating methodology thresholds,
+      draft a surveillance alert memorandum covering:
+      1. Trigger Identification (specific financial metrics that have breached or approached thresholds)
+      2. Methodology Reference (applicable methodology criteria and threshold values)
+      3. Precedent Context (similar situations and rating actions taken historically)
+      4. Recommended Surveillance Action (watchlist placement, detailed review, or no action required)
+      5. Risk Assessment (severity and timeline of potential impact)
+
+api:
+  cors:
+    allowed_origins:
+      - "http://localhost:3000"
+      - "http://localhost:8000"
+    allowed_methods:
+      - "GET"
+      - "POST"
+      - "OPTIONS"
+    allowed_headers:
+      - "*"
+  rate_limit:
+    requests_per_minute: 60

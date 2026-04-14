@@ -1,0 +1,98 @@
+.financial-form__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.financial-form__empty {
+  text-align: center;
+  color: var(--color-gray-400);
+  padding: var(--spacing-xl);
+  font-size: var(--font-size-sm);
+}
+
+.financial-form__year {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.financial-form__year-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-base);
+  background: var(--color-gray-50);
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-navy);
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.financial-form__year-header:hover {
+  background: var(--color-gray-100);
+}
+
+.financial-form__year-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.financial-form__year-summary {
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  color: var(--color-gray-500);
+}
+
+.financial-form__year-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.financial-form__remove {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--border-radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.financial-form__remove:hover {
+  background: var(--color-error-bg);
+}
+
+.financial-form__chevron {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  transition: transform var(--transition-fast);
+}
+
+.financial-form__chevron--open {
+  transform: rotate(180deg);
+}
+
+.financial-form__year-body {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.financial-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--spacing-base);
+}
+
+.financial-form__suffix {
+  font-weight: 400;
+  color: var(--color-gray-400);
+  font-size: var(--font-size-xs);
+}

@@ -1,0 +1,32 @@
+.disclaimer-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
+  background: var(--color-warning-bg);
+  border: 1px solid #fde68a;
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-lg);
+}
+
+.disclaimer-banner__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-warning);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.disclaimer-banner__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  margin: 0;
+}

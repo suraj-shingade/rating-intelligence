@@ -1,0 +1,133 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: var(--color-navy);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+/* ---- Brand ---- */
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar__brand-logo {
+  flex-shrink: 0;
+}
+
+.sidebar__brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-accent-gold);
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  border-radius: var(--border-radius);
+}
+
+.sidebar__brand-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sidebar__brand-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.sidebar__brand-subtitle {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* ---- Navigation ---- */
+
+.sidebar__nav {
+  flex: 1;
+  padding: var(--spacing-base) 0;
+}
+
+.sidebar__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__nav-item {
+  margin-bottom: 2px;
+}
+
+.sidebar__nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 0.625rem var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.sidebar__nav-link:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar__nav-link--active {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--color-accent-gold);
+  font-weight: 500;
+}
+
+.sidebar__nav-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.sidebar__nav-link--active .sidebar__nav-icon {
+  opacity: 1;
+  color: var(--color-accent-gold);
+}
+
+.sidebar__nav-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Footer ---- */
+
+.sidebar__footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar__footer-text {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.5;
+}

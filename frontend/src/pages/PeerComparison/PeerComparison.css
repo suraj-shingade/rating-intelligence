@@ -1,0 +1,87 @@
+.peer-comparison {
+  padding: var(--spacing-xl);
+  flex: 1;
+  max-width: 1060px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.peer-comparison__financial-summary {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md) 0;
+}
+
+/* ---- Parameters ---- */
+
+.peer-comparison__params {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.peer-comparison__slider {
+  width: 100%;
+  accent-color: var(--color-deep-blue);
+  cursor: pointer;
+}
+
+.peer-comparison__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+/* ---- Error ---- */
+
+.peer-comparison__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-error);
+}
+
+/* ---- Results ---- */
+
+.peer-comparison__result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.peer-comparison__result-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.peer-comparison__entity-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.peer-comparison__result-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+
+.peer-comparison__meta-sep {
+  color: var(--color-gray-300);
+}
+
+@media (max-width: 768px) {
+  .peer-comparison__params {
+    grid-template-columns: 1fr;
+  }
+}

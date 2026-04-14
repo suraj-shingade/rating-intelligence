@@ -1,0 +1,192 @@
+.credit-assessment {
+  padding: var(--spacing-xl);
+  flex: 1;
+  max-width: 1060px;
+}
+
+/* ---- Tabs ---- */
+
+.credit-assessment__tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-gray-200);
+  margin-bottom: var(--spacing-lg);
+  gap: 0;
+}
+
+.credit-assessment__tab {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-gray-500);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.credit-assessment__tab:hover {
+  color: var(--color-navy);
+}
+
+.credit-assessment__tab--active {
+  color: var(--color-navy);
+  border-bottom-color: var(--color-accent-gold);
+}
+
+.credit-assessment__tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-deep-blue);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+/* ---- Tab Content ---- */
+
+.credit-assessment__tab-content {
+  min-height: 200px;
+}
+
+.credit-assessment__context {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* ---- Actions ---- */
+
+.credit-assessment__actions {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray-100);
+  margin-top: var(--spacing-lg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ---- Error ---- */
+
+.credit-assessment__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-error);
+}
+
+/* ---- Results ---- */
+
+.credit-assessment__result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.credit-assessment__result-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.credit-assessment__entity-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.credit-assessment__result-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  flex-wrap: wrap;
+}
+
+.credit-assessment__meta-sep {
+  color: var(--color-gray-300);
+}
+
+/* Strengths & Weaknesses Grid */
+
+.credit-assessment__sw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .credit-assessment__sw-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.credit-assessment__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.credit-assessment__list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+.credit-assessment__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.credit-assessment__list--strengths li::before {
+  background: var(--color-success);
+}
+
+.credit-assessment__list--weaknesses li::before {
+  background: var(--color-error);
+}
+
+/* ---- Print ---- */
+
+@media print {
+  .credit-assessment__tabs,
+  .credit-assessment__tab-content,
+  .credit-assessment__actions,
+  .sidebar,
+  .header {
+    display: none !important;
+  }
+
+  .credit-assessment {
+    padding: 0;
+    max-width: none;
+  }
+
+  .layout__main {
+    margin-left: 0;
+  }
+}

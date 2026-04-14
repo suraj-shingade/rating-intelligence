@@ -1,0 +1,35 @@
+# Core Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# LangChain Ecosystem
+langchain==0.3.14
+langchain-core==0.3.29
+langchain-anthropic==0.3.3
+langchain-weaviate==0.0.6
+langchain-text-splitters==0.3.4
+
+# Anthropic SDK
+anthropic==0.42.0
+
+# Weaviate
+weaviate-client==4.10.4
+
+# Structured Logging
+structlog==24.4.0
+
+# Configuration
+pyyaml==6.0.2
+python-dotenv==1.0.1
+
+# Document Processing
+tiktoken==0.8.0
+
+# HTTP Client
+httpx==0.28.1
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.25.0

@@ -1,0 +1,38 @@
+.company-profile-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.company-profile-form__title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.company-profile-form__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-base);
+}
+
+.company-profile-form__span-2 {
+  grid-column: span 2;
+}
+
+.company-profile-form__span-3 {
+  grid-column: span 3;
+}
+
+@media (max-width: 768px) {
+  .company-profile-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-profile-form__span-2,
+  .company-profile-form__span-3 {
+    grid-column: span 1;
+  }
+}

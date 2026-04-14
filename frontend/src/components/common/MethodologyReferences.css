@@ -1,0 +1,107 @@
+.methodology-refs {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-top: var(--spacing-lg);
+}
+
+.methodology-refs__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-gray-50);
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-navy);
+  transition: background var(--transition-fast);
+}
+
+.methodology-refs__toggle:hover {
+  background: var(--color-gray-100);
+}
+
+.methodology-refs__toggle-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.methodology-refs__chevron {
+  font-size: 0.75rem;
+  transition: transform var(--transition-fast);
+  color: var(--color-gray-500);
+}
+
+.methodology-refs__chevron--open {
+  transform: rotate(180deg);
+}
+
+.methodology-refs__list {
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.methodology-refs__item {
+  padding: var(--spacing-base) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.methodology-refs__item:last-child {
+  border-bottom: none;
+}
+
+.methodology-refs__item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-sm);
+}
+
+.methodology-refs__source {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-deep-blue);
+  background: var(--color-info-bg);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+.methodology-refs__section {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+  background: var(--color-gray-100);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+.methodology-refs__score {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-gold-dark);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.methodology-refs__score-bar {
+  height: 4px;
+  background: var(--color-gray-100);
+  border-radius: 2px;
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.methodology-refs__score-fill {
+  height: 100%;
+  background: var(--color-accent-gold);
+  border-radius: 2px;
+  transition: width var(--transition-slow);
+}
+
+.methodology-refs__excerpt {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
